@@ -2,16 +2,16 @@
 <?php
 require_once('conect.php');
 $userid;
-// if(isset($_POST['update']))
-// {
-// 	echo $_REQUEST['name'];
-// 	$sql2 = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',telephone = '".$_POST['telephone']."',address = '".$_POST['address']."' WHERE id ='".$_POST['id']."'";
-// 	$result2 = mysqli_query($connection,$sql2);
-// 	// $sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
-// 	// $result3 = mysqli_query($connection,$sql3);
-// 	// $row=mysqli_fetch_assoc($result3);
-// 	//echo"<script> alert('Updated Sucessfully') </script>";
-// }
+if(isset($_POST['update']))
+{
+	echo $_REQUEST['name'];
+	$sql2 = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',telephone = '".$_POST['telephone']."',address = '".$_POST['address']."' WHERE id ='".$_POST['id']."'";
+	$result2 = mysqli_query($connection,$sql2);
+	// $sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
+	// $result3 = mysqli_query($connection,$sql3);
+	// $row=mysqli_fetch_assoc($result3);
+	//echo"<script> alert('Updated Sucessfully') </script>";
+}
 if(isset($_GET['id']))
 {
 	$userid = $_GET['id'];
@@ -48,7 +48,7 @@ if(isset($_GET['id']))
                 <th>Telephone No</th>
                 <th>Address</th>
             </tr>
-            <form action="update.php" method="POST">
+            <form action="" method="POST">
 				<?php
 					$userid = $_GET['id'];
                     $sql1 = "SELECT * FROM user WHERE id =$userid";

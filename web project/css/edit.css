@@ -18,7 +18,7 @@ body{
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 70px 30px; 
-	opacity: 0.95;
+	  opacity: 0.95;
   
 	
 }
@@ -38,7 +38,6 @@ h1{
 
 .loginbox input{
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .loginbox input[type="text"], input[type="password"]
@@ -47,7 +46,6 @@ h1{
     border-bottom: 1px solid #fff;
     background: transparent;
     outline: none;
-    height: 40px;
     color: #fff;
     font-size: 16px;
 }
@@ -107,15 +105,6 @@ li a:hover {
   background-color: #111;
 }
 
-
-table
-{
-	width: 100%;
-	height: 50%;
-	border:1 ;
-	padding:10px ;
-}
-
 a:link
 {
 
@@ -127,18 +116,26 @@ a:link
   font-size:15px;
 }
 
-tr
-{
-	width: 100%;
-	height: 50%;
-
+#edituser {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-echo
-{
-	
+#edituser td, #edituser th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  padding: 20px
 }
 
+#edituser th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F56;
+  color: white;
+  text-align: center;
+}
 
 
 

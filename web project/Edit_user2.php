@@ -7,6 +7,13 @@ if(isset($_POST['update']))
 	echo $_REQUEST['id'];
 	$sql2 = "UPDATE user SET name = '".$_REQUEST['name']."',email = '".$_REQUEST['email']."',telephone = '".$_REQUEST['telephone']."',address = '".$_REQUEST['address']."' WHERE id ='".$_REQUEST['id']."'";
 	$result2 = mysqli_query($conn,$sql2);
+	if ($con->query($sql2) === TRUE) {
+        echo("Done");
+    } else {
+        echo "Error: " . $sql . "<br>" . $con->error;
+    }
+
+    $con->close();
 	// $sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
 	// $result3 = mysqli_query($connection,$sql3);
 	// $row=mysqli_fetch_assoc($result3);

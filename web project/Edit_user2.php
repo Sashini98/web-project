@@ -7,10 +7,10 @@ if(isset($_POST['update']))
 	echo $_REQUEST['id'];
 	$sql2 = "UPDATE user SET name = '".$_REQUEST['name']."',email = '".$_REQUEST['email']."',telephone = '".$_REQUEST['telephone']."',address = '".$_REQUEST['address']."' WHERE id ='".$_REQUEST['id']."'";
 	$result2 = mysqli_query($conn,$sql2);
-	if ($con->query($sql2) === TRUE) {
+	if ($conn->query($sql2) === TRUE) {
         echo("Done");
     } else {
-        echo "Error: " . $sql . "<br>" . $con->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $con->close();

@@ -4,7 +4,6 @@ require_once('conect.php');
 $userid;
 if(isset($_POST['update']))
 {
-	echo $_REQUEST['id'];
 	$sql2 = "UPDATE user SET name = '".$_REQUEST['name']."',email = '".$_REQUEST['email']."',telephone = '".$_REQUEST['telephone']."',address = '".$_REQUEST['address']."' WHERE id =".$_REQUEST['id']."";
 	$result2 = mysqli_query($conn,$sql2);
 	if ($conn->query($sql2) === TRUE) {
@@ -13,11 +12,11 @@ if(isset($_POST['update']))
         echo "Error: " . $sql2 . "<br>" . $conn->error;
     }
 
-    $con->close();
+    $conn->close();
 	// $sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
 	// $result3 = mysqli_query($connection,$sql3);
 	// $row=mysqli_fetch_assoc($result3);
-	//echo"<script> alert('Updated Sucessfully') </script>";
+	echo"<script> alert('Updated Sucessfully') </script>";
 }
 if(isset($_GET['id']))
 {
@@ -30,9 +29,7 @@ if(isset($_GET['id']))
 	if($result)
 	{
 	}
-	
 	echo "Sucessfull";
-	
 }
 ?>
 

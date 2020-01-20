@@ -10,7 +10,7 @@ if(isset($_POST['update']))
 	if ($conn->query($sql2) === TRUE) {
         echo("Done");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql2 . "<br>" . $conn->error;
     }
 
     $con->close();

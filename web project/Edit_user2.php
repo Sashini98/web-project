@@ -9,7 +9,7 @@ if(isset($_POST['update']))
 	// $sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
 	// $result3 = mysqli_query($connection,$sql3);
 	// $row=mysqli_fetch_assoc($result3);
-	echo"<script> alert('Updated Sucessfully') </script>";
+	//echo"<script> alert('Updated Sucessfully') </script>";
 }
 if(isset($_GET['id']))
 {

@@ -1,6 +1,7 @@
 
 <?php
 require_once('conect.php');
+$userid;
 if(isset($_POST['update']))
 {
 	echo $_REQUEST['name'];
@@ -13,6 +14,7 @@ if(isset($_POST['update']))
 }
 if(isset($_GET['id']))
 {
+	$userid = $_GET['id'];
 	$sql1 = "SELECT * FROM user WHERE id =".$_GET['id'];
 	$result = mysqli_query($conn,$sql1);
 	$row=mysqli_fetch_assoc($result);
@@ -47,7 +49,7 @@ if(isset($_GET['id']))
             </tr>
             <form action="Edit_user2.php" method="POST">
                 <?php
-                    $sql1 = "SELECT * FROM user WHERE id =".$_GET['id'];
+                    $sql1 = "SELECT * FROM user WHERE id =$userid";
                     $result = $conn-> query($sql1);
                     if($result-> num_rows > 0){
                         while($row = $result-> fetch_assoc()){

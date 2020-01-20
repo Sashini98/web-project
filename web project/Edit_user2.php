@@ -48,7 +48,8 @@ if(isset($_GET['id']))
                 <th>Address</th>
             </tr>
             <form action="Edit_user2.php" method="POST">
-                <?php
+				<?php
+					$userid = $_GET['id'];
                     $sql1 = "SELECT * FROM user WHERE id =$userid";
                     $result = $conn-> query($sql1);
                     if($result-> num_rows > 0){

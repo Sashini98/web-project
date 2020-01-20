@@ -10,6 +10,19 @@ if(isset($_POST['update']))
 	// $row=mysqli_fetch_assoc($result3);
 	echo"<script> alert('Updated Sucessfully') </script>";
 }
+if(isset($_GET['id']))
+{
+	$sql1 = "SELECT * FROM user WHERE id =".$_GET['id'];
+	$result = mysqli_query($conn,$sql1);
+	$row=mysqli_fetch_assoc($result);
+	
+	if($result)
+	{
+	}
+	
+	echo "Sucessfull";
+	
+}
 ?>
 
 

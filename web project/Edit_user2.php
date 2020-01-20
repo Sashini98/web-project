@@ -53,7 +53,7 @@ if(isset($_GET['id']))
                         while($row = $result-> fetch_assoc()){
                             echo '<tr>
                                     <td>
-                                        <input type="text" name="id" class=text_box required value='.$row['id'].'readonly>
+                                        <input type="text" name="id" class=text_box required value='.$row['id'].'disabled>
                                     </td>
                                     <td>
                                         <input type="text" name="name" required value='.$row['name'].'>

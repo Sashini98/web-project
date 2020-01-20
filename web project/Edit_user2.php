@@ -15,6 +15,7 @@ if(isset($_POST['update']))
 if(isset($_GET['id']))
 {
 	$userid = $_GET['id'];
+	echo $userid;
 	$sql1 = "SELECT * FROM user WHERE id =".$_GET['id'];
 	$result = mysqli_query($conn,$sql1);
 	$row=mysqli_fetch_assoc($result);

@@ -13,9 +13,9 @@ if(isset($_POST['update']))
     }
 
     $conn->close();
-	// $sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
-	// $result3 = mysqli_query($connection,$sql3);
-	// $row=mysqli_fetch_assoc($result3);
+	$sql3 = "SELECT * FROM user WHERE id =".$_POST['id'];
+	$result3 = mysqli_query($connection,$sql3);
+	$row=mysqli_fetch_assoc($result3);
 	echo"<script> alert('Updated Sucessfully') </script>";
 }
 if(isset($_GET['id']))
